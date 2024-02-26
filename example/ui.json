@@ -1,0 +1,120 @@
+{
+    "metadata": {
+        "streamsync_version": "0.3.0"
+    },
+    "components": {
+        "root": {
+            "id": "root",
+            "type": "root",
+            "content": {
+                "appName": "My App"
+            },
+            "parentId": null,
+            "position": 0,
+            "handlers": {},
+            "visible": true
+        },
+        "c0f99a9e-5004-4e75-a6c6-36f17490b134": {
+            "id": "c0f99a9e-5004-4e75-a6c6-36f17490b134",
+            "type": "page",
+            "content": {
+                "pageMode": "compact",
+                "emptinessColor": "#e9eef1"
+            },
+            "parentId": "root",
+            "position": 0,
+            "handlers": {},
+            "visible": true
+        },
+        "bebc5fe9-63a7-46a7-b0fa-62303555cfaf": {
+            "id": "bebc5fe9-63a7-46a7-b0fa-62303555cfaf",
+            "type": "header",
+            "content": {
+                "text": "@{my_app.title}"
+            },
+            "parentId": "c0f99a9e-5004-4e75-a6c6-36f17490b134",
+            "position": 0,
+            "handlers": {},
+            "visible": true
+        },
+        "h22fgtrxsdvuwow4": {
+            "id": "h22fgtrxsdvuwow4",
+            "type": "repeater",
+            "content": {
+                "repeaterObject": "@{object1[object_1_2]}",
+                "keyVariable": "itemId",
+                "valueVariable": "item"
+            },
+            "parentId": "c0f99a9e-5004-4e75-a6c6-36f17490b134",
+            "position": 1,
+            "handlers": {},
+            "visible": true
+        },
+        "w7q9y14qedxgfhhn": {
+            "id": "w7q9y14qedxgfhhn",
+            "type": "section",
+            "content": {
+                "title": "@{itemId}"
+            },
+            "parentId": "h22fgtrxsdvuwow4",
+            "position": 0,
+            "handlers": {},
+            "visible": true
+        },
+        "r1y50qiyzlbzyk6t": {
+            "id": "r1y50qiyzlbzyk6t",
+            "type": "columns",
+            "content": {},
+            "parentId": "w7q9y14qedxgfhhn",
+            "position": 0,
+            "handlers": {},
+            "visible": true
+        },
+        "fxwdez1n18twaik0": {
+            "id": "fxwdez1n18twaik0",
+            "type": "column",
+            "content": {
+                "width": "1"
+            },
+            "parentId": "r1y50qiyzlbzyk6t",
+            "position": 0,
+            "handlers": {},
+            "visible": true
+        },
+        "xm73lqr6d95ui90j": {
+            "id": "xm73lqr6d95ui90j",
+            "type": "column",
+            "content": {
+                "width": "1"
+            },
+            "parentId": "r1y50qiyzlbzyk6t",
+            "position": 1,
+            "handlers": {},
+            "visible": true
+        },
+        "4mn7u4deyw0nkrlx": {
+            "id": "4mn7u4deyw0nkrlx",
+            "type": "text",
+            "content": {
+                "text": "@{item}"
+            },
+            "parentId": "fxwdez1n18twaik0",
+            "position": 0,
+            "handlers": {},
+            "visible": true
+        },
+        "ibc3mh053wr1habe": {
+            "id": "ibc3mh053wr1habe",
+            "type": "button",
+            "content": {
+                "text": "Button Text"
+            },
+            "parentId": "xm73lqr6d95ui90j",
+            "position": 0,
+            "handlers": {
+                "ss-click": "button_pressed"
+            },
+            "visible": true
+        }
+    }
+}
